@@ -1,6 +1,6 @@
 # https://docs.cypress.io/guides/continuous-integration/github-actions#Testing-with-Cypress-Docker-Images
 name: Cypress Tests
-on: [push, pull_request]
+on: push
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
