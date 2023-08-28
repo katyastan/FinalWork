@@ -1,5 +1,5 @@
 # https://docs.cypress.io/guides/continuous-integration/github-actions#Testing-with-Cypress-Docker-Images
-name: Cypress Tests
+name: Cypress
 on: push
 jobs:
   cypress-run:

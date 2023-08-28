@@ -1,8 +1,8 @@
-const { defineConfig } = require("cypress");
+const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
   e2e: {
-    specPattern: 'cypress/{api,e2e}/**/*.{cy,spec}.{js,jsx,ts,tsx}'
+    specPattern: 'cypress/{api,e2e}/**/*.{cy,spec}.{js,jsx,ts,tsx}',
   },
   viewportWidth: 1280,
   viewportHeight: 720,
@@ -11,12 +11,12 @@ module.exports = defineConfig({
   execTimeout: 60000,
   numTestsKeptInMemory: 0,
   chromeWebSecurity: false,
-  chromeArgs: ["--disable-extensions"],
+  chromeArgs: ['--disable-extensions'],
   // video: false,
   retries: {
     // Configure retry attempts for `cypress run`. Default is 0
     runMode: 2,
     // Configure retry attempts for `cypress open`. Default is 0
-    openMode: 0
+    openMode: 0,
   },
-});
+})
