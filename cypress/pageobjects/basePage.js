@@ -2,10 +2,12 @@ class BasePage {
   navigate(url) {
     cy.visit(url)
   }
-  static get title() {
+
+  get title() {
     return cy.title()
   }
-  static get currentURL() {
+
+  get currentURL() {
     return cy.url()
   }
 }

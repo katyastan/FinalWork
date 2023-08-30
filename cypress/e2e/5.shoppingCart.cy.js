@@ -1,11 +1,12 @@
 const mainPage = require('../pageobjects/mainPage')
 const ProductPage = require('../pageobjects/productPage')
+
 const productPage = new ProductPage()
-const searchResultPage = require('../pageobjects/searchResultPage')
-const { AdBlock } = require('../helpers/adblocks')
+const searchProductsResultPage = require('../pageobjects/searchProductsResultPage')
+const AdBlock = require('../helpers/adblocks')
 const header = require('../pageobjects/components/header')
 const offersPage = require('../pageobjects/offersPage')
-const checkoutPage = require('../pageobjects/checkoutPage')
+const shoppingCartPage = require('../pageobjects/shoppingCartPage')
 
 beforeEach(() => {
   AdBlock.blockSafe()
@@ -13,24 +14,23 @@ beforeEach(() => {
   mainPage.navigate('https://www.onliner.by/')
 })
 
-describe('Add items to cart and verify', function () {
-  ;[['Apple iPhone 14', 'Samsung Galaxy A34']].forEach((items) => {
-    it(`Check adding to cart ${items}`, () => {
-      // Search items and add to cart with minimal price
-      items.forEach((item) => {
-        header.search(item)
-        searchResultPage.clickFirstItem()
-        productPage.clickOffers()
+describe('Shopping cart', () => {
+  ;[
+    ['Apple iPhone 14', 'Samsung Galaxy A34'],
+    ['AirPods Pro', 'Lavazza Qualita Oro'],
+  ].forEach((products) => {
+    it(`Check adding to cart ${products}`, () => {
+      products.forEach((product) => {
+        header.search(product)
+        searchProductsResultPage.navigateToFirst()
+        productPage.navigateToOffers()
         offersPage.sortPriceAscending()
-        offersPage.addtoCartTopOffer()
-        // offersPage.clickContinueShopping()
+        offersPage.addTopOfferToCart()
+        offersPage.confirmContinueShoppingWithPopupBanner()
       })
-      // Go to cart
-      header.goToCheckout()
-
-      // All added items in the cart in reverse order
-      items.forEach((item, index) => {
-        checkoutPage.itemsTitles.eq(items.length - 1 - index).contains(item)
+      header.navigateToCart()
+      products.reverse().forEach((product, index) => {
+        shoppingCartPage.productTitles.eq(index).contains(product)
       })
     })
   })

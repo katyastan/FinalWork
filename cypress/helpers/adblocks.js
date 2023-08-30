@@ -13,20 +13,22 @@ const GOOGLE_BLOCK_LIST = [
 ]
 
 class AdBlock {
-  static block(listLinks) {
+  block(listLinks) {
     listLinks.forEach((url) => {
       cy.intercept(`${url}/**`, (req) => {
         req.reply({ statusCode: 404, body: 'Analytics blocked' })
       })
     })
   }
-  static blockSafe() {
+
+  blockSafe() {
     this.block(BLOCK_SAFE_LIST)
   }
+
   // Blocking Google might cause reCaptha doesn't work correctly
-  static blockGoogle() {
+  blockGoogle() {
     this.block(GOOGLE_BLOCK_LIST)
   }
 }
 
-module.exports = { AdBlock }
+module.exports = new AdBlock()

@@ -4,29 +4,41 @@ class OffersPage extends BasePage {
   get sortSelector() {
     return cy.get('.offers-list__sorting select')
   }
+
   sortPriceAscending() {
     this.sortSelector.select('price:asc')
   }
+
   sortPriceDescending() {
     this.sortSelector.select('price:desc')
   }
+
   shopRatingDescending() {
     this.sortSelector.select('shop_rating:desc')
   }
+
   get offers() {
     return cy.get('.offers-list__unit')
   }
-  addtoCartTopOffer() {
+
+  addTopOfferToCart() {
     this.offers
       .first()
       .find('.offers-list__part_action .offers-list__button_cart')
       .click()
   }
-  get continueShopping() {
+
+  get continueShoppingButton() {
     return cy.get('.product-recommended__control_checkout a:first-of-type')
   }
-  clickContinueShopping() {
-    this.continueShopping.click()
+
+  confirmContinueShoppingWithPopupBanner() {
+    try {
+      this.continueShoppingButton.click()
+    } catch (e) {
+      // eslint-disable-next-line no-console
+      console.debug('The random popup seems was not displayed this time.')
+    }
   }
 }
 

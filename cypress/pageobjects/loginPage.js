@@ -24,6 +24,7 @@ class LoginPage extends BasePage {
       '//div[contains(@class,"auth-form__description_extended-other")]'
     )
   }
+
   get errorPasswordMessage() {
     return cy.xpath(
       '//div[contains(@class,"auth-form__description_extended-other")]'
@@ -39,10 +40,12 @@ class LoginPage extends BasePage {
     this.passwordField.type(password)
     this.clickEnterButtonOnLoginPage()
   }
+
   loginUserName(userName) {
     this.userNameField.type(userName)
     this.clickEnterButtonOnLoginPage()
   }
+
   loginPassword(password) {
     this.passwordField.type(password)
     this.clickEnterButtonOnLoginPage()

@@ -1,6 +1,6 @@
 const mainPage = require('../pageobjects/mainPage')
 const newsPage = require('../pageobjects/newsPage')
-const { AdBlock } = require('../helpers/adblocks')
+const AdBlock = require('../helpers/adblocks')
 const { REACTIONS } = require('../helpers/reactions')
 
 beforeEach(() => {
@@ -9,7 +9,7 @@ beforeEach(() => {
   mainPage.navigate('https://www.onliner.by/')
 })
 
-describe('Reaction to the news', function () {
+describe('Reaction to the News', () => {
   ;[
     REACTIONS.astonished,
     REACTIONS.heart,
@@ -17,24 +17,24 @@ describe('Reaction to the news', function () {
     REACTIONS.smile,
     REACTIONS.sob,
   ].forEach((reaction) => {
-    it(`Check rections increment on click for ${reaction}`, () => {
-      mainPage.clickNews()
+    it(`Check '${reaction}' reactions increment on click`, () => {
+      mainPage.navigateToNews()
 
       let counter = 0
       newsPage
-        .getCounter(reaction)
+        .reactionsCounter(reaction)
         .invoke('text')
         .then((text) => {
           counter = Number(text)
         })
 
-      newsPage.clickReaction(reaction)
+      newsPage.leaveReaction(reaction)
 
       newsPage
-        .getCounter(reaction)
+        .reactionsCounter(reaction)
         .invoke('text')
         .then((text) => {
-          let newCounter = Number(text)
+          const newCounter = Number(text)
           expect(newCounter).equals(counter + 1)
         })
     })

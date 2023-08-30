@@ -4,10 +4,12 @@ class NewsPage extends BasePage {
   reaction(name) {
     return cy.xpath(`//div[@data-reaction="${name}"]`)
   }
-  getCounter(name) {
+
+  reactionsCounter(name) {
     return this.reaction(name).find('.st-count')
   }
-  clickReaction(name) {
+
+  leaveReaction(name) {
     return this.reaction(name).click()
   }
 }

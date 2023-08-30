@@ -3,12 +3,12 @@ class Header {
     return cy.xpath('//div[@class="auth-bar__item auth-bar__item--text"]')
   }
 
-  clickEnterButton() {
+  navigateToLoginPage() {
     this.enterButton.click()
   }
 
   get searchFieldOnTheMainPage() {
-    return cy.xpath('//input[@class="fast-search__input"][1]')
+    return cy.xpath('//input[@class="fast-search__input"]')
   }
 
   search(item) {
@@ -20,7 +20,7 @@ class Header {
     return cy.get('a.auth-bar__item--cart')
   }
 
-  goToCheckout() {
+  navigateToCart() {
     this.cart.click()
   }
 
@@ -33,7 +33,8 @@ class Header {
       `//span[@class="b-main-navigation__text" and text()="${text}"]`
     )
   }
-  clickNavigationButton(text) {
+
+  navigateToSiteCategory(text) {
     return this.navigationButton(text).click()
   }
 }

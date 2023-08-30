@@ -16,13 +16,14 @@ jobs:
         uses: cypress-io/github-action@v5
         env:
           # https://github.com/cypress-io/github-action#record-test-results-on-cypress-cloud
-           # my project ID
+          # my CypressCloud project ID
           CYPRESS_PROJECT_ID: gpxoq4
-          # in Github repo settings
+          # Secret in Github repo settings
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.CYPRESS_GITHUB_TOKEN }}
         with:
-          record: true
+          # Comment this now to prevent sending report to Cypress cloud now.
+          # record: true
           browser: chrome
           # Basically this command to start the JS site server.
           # But we test public site

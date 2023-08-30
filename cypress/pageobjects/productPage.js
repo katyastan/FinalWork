@@ -7,16 +7,20 @@ class ProductPage extends BasePage {
       `//*[@id="specs"]//table//td[contains(., "${parameter}")]/..//span[@class="value__text"]`
     )
   }
+
   get modelInfo() {
     return cy.get('.catalog-masthead h1')
   }
+
   get releaseYearInfo() {
     return this.getProductInformationTable(RELEASE_YEAR_LABEL)
   }
+
   get offers() {
     return cy.get('a.js-product-prices-count-link')
   }
-  clickOffers() {
+
+  navigateToOffers() {
     this.offers.click()
   }
 }

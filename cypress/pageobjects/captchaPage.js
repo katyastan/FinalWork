@@ -5,9 +5,11 @@ class CaptchaPage extends BasePage {
   get securityQuestion() {
     return cy.get('.auth-form__mediabox span')
   }
+
   get reCaptchaIframe() {
     return Iframe.xpath('//iframe[@title="reCAPTCHA"]')
   }
+
   clickCaptchaButton() {
     this.reCaptchaIframe
       .find('.recaptcha-checkbox-spinner')

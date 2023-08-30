@@ -1,15 +1,15 @@
 const mainPage = require('../pageobjects/mainPage')
 const header = require('../pageobjects/components/header')
-const searchResultPage = require('../pageobjects/searchResultPage')
+const searchProductsResultPage = require('../pageobjects/searchProductsResultPage')
 const comparePage = require('../pageobjects/comparePage')
-const { AdBlock } = require('../helpers/adblocks')
+const AdBlock = require('../helpers/adblocks')
 
 beforeEach(() => {
   AdBlock.blockSafe()
   AdBlock.blockGoogle()
 })
 
-describe('Add products to comparison', function () {
+describe('Add products to comparison', () => {
   ;[
     ['Apple iPhone 14', 'Samsung Galaxy S23'],
     ['Samsung Galaxy A34', 'Realme 11 Pro', 'Redmi Note 12'],
@@ -17,19 +17,19 @@ describe('Add products to comparison', function () {
   ].forEach((productModels) => {
     it(`should Compare Products : ${productModels}`, () => {
       mainPage.navigate('https://www.onliner.by/')
-      // Actions
-      let lastProductIndex = productModels.length - 1
+
+      const lastProductIndex = productModels.length - 1
       productModels.forEach((productModel, index) => {
         header.search(productModel)
-        searchResultPage.addToCompare()
+        searchProductsResultPage.addToCompare()
 
         if (index !== lastProductIndex) {
-          searchResultPage.clickCloseSearchButton()
-          searchResultPage.clearSearchField()
+          searchProductsResultPage.clickCloseSearchButton()
+          searchProductsResultPage.clearSearchField()
         }
       })
-      // Validation
-      searchResultPage.clickCompareButton()
+
+      searchProductsResultPage.navigateToCompare()
       productModels.forEach((productModel, index) => {
         // https://docs.cypress.io/api/commands/eq#Index
         comparePage.compareItem.eq(index).contains(productModel)

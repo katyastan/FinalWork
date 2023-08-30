@@ -12,11 +12,9 @@ module.exports = defineConfig({
   numTestsKeptInMemory: 0,
   chromeWebSecurity: false,
   chromeArgs: ['--disable-extensions'],
-  // video: false,
+  video: false,
   retries: {
-    // Configure retry attempts for `cypress run`. Default is 0
+    // Configure retry attempts for `cypress run`.Default is 0
     runMode: 2,
-    // Configure retry attempts for `cypress open`. Default is 0
-    openMode: 0,
   },
 })
