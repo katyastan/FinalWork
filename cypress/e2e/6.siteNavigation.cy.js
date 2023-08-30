@@ -3,6 +3,8 @@ const header = require('../pageobjects/components/header')
 const BasePage = require('../pageobjects/basePage')
 const AdBlock = require('../helpers/adblocks')
 
+const basePage = new BasePage()
+
 beforeEach(() => {
   AdBlock.blockSafe()
   AdBlock.blockGoogle()
@@ -19,7 +21,7 @@ describe('Checking the navigation bar', () => {
   ].forEach(([navigationText, expectedTitle]) => {
     it(`Clicking '${navigationText}' navigates to the page '${expectedTitle}'`, () => {
       header.navigateToSiteCategory(navigationText)
-      BasePage.title.should('equal', expectedTitle)
+      basePage.title.should('equal', expectedTitle)
     })
   })
   ;[
@@ -31,7 +33,7 @@ describe('Checking the navigation bar', () => {
   ].forEach(([navigationText, expectedURL]) => {
     it(`Clicking '${navigationText}' navigates to ${expectedURL}`, () => {
       header.navigateToSiteCategory(navigationText)
-      BasePage.currentURL.should('equal', expectedURL)
+      basePage.currentURL.should('equal', expectedURL)
     })
   })
 })

@@ -26,7 +26,7 @@ describe('Shopping cart', () => {
         productPage.navigateToOffers()
         offersPage.sortPriceAscending()
         offersPage.addTopOfferToCart()
-        offersPage.confirmContinueShoppingWithPopupBanner()
+        // offersPage.confirmContinueShoppingWithPopupBanner()
       })
       header.navigateToCart()
       products.reverse().forEach((product, index) => {

@@ -21,7 +21,7 @@ class Header {
   }
 
   navigateToCart() {
-    this.cart.click()
+    this.cart.click({ force: true })
   }
 
   clearSearch(item) {
