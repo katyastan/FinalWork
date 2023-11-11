@@ -1,0 +1,2336 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "products": {
+            "type": "array",
+            "items": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "integer"
+                        },
+                        "key": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "full_name": {
+                            "type": "string"
+                        },
+                        "name_prefix": {
+                            "type": "string"
+                        },
+                        "extended_name": {
+                            "type": "string"
+                        },
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "key": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "key"
+                            ]
+                        },
+                        "status": {
+                            "type": "string"
+                        },
+                        "images": {
+                            "type": "object",
+                            "properties": {
+                                "header": {
+                                    "type": "string"
+                                },
+                                "icon": {
+                                    "type": "null"
+                                }
+                            },
+                            "required": [
+                                "header",
+                                "icon"
+                            ]
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "html_url": {
+                            "type": "string"
+                        },
+                        "reviews": {
+                            "type": "object",
+                            "properties": {
+                                "rating": {
+                                    "type": "integer"
+                                },
+                                "count": {
+                                    "type": "integer"
+                                },
+                                "html_url": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "rating",
+                                "count",
+                                "html_url",
+                                "url"
+                            ]
+                        },
+                        "review_url": {
+                            "type": "null"
+                        },
+                        "url": {
+                            "type": "string"
+                        },
+                        "prices": {
+                            "type": "object",
+                            "properties": {
+                                "price_min": {
+                                    "type": "object",
+                                    "properties": {
+                                        "amount": {
+                                            "type": "string"
+                                        },
+                                        "currency": {
+                                            "type": "string"
+                                        },
+                                        "converted": {
+                                            "type": "object",
+                                            "properties": {
+                                                "BYN": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "amount": {
+                                                            "type": "string"
+                                                        },
+                                                        "currency": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "amount",
+                                                        "currency"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "BYN"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "amount",
+                                        "currency",
+                                        "converted"
+                                    ]
+                                },
+                                "price_max": {
+                                    "type": "object",
+                                    "properties": {
+                                        "amount": {
+                                            "type": "string"
+                                        },
+                                        "currency": {
+                                            "type": "string"
+                                        },
+                                        "converted": {
+                                            "type": "object",
+                                            "properties": {
+                                                "BYN": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "amount": {
+                                                            "type": "string"
+                                                        },
+                                                        "currency": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "amount",
+                                                        "currency"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "BYN"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "amount",
+                                        "currency",
+                                        "converted"
+                                    ]
+                                },
+                                "offers": {
+                                    "type": "object",
+                                    "properties": {
+                                        "count": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "required": [
+                                        "count"
+                                    ]
+                                },
+                                "html_url": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "price_min",
+                                "price_max",
+                                "offers",
+                                "html_url",
+                                "url"
+                            ]
+                        },
+                        "second": {
+                            "type": "object",
+                            "properties": {
+                                "offers_count": {
+                                    "type": "integer"
+                                },
+                                "min_price": {
+                                    "type": "object",
+                                    "properties": {
+                                        "amount": {
+                                            "type": "string"
+                                        },
+                                        "currency": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "amount",
+                                        "currency"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "offers_count",
+                                "min_price"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "id",
+                        "key",
+                        "name",
+                        "full_name",
+                        "name_prefix",
+                        "extended_name",
+                        "schema",
+                        "status",
+                        "images",
+                        "description",
+                        "html_url",
+                        "reviews",
+                        "review_url",
+                        "url",
+                        "prices",
+                        "second"
+                    ]
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "integer"
+                        },
+                        "key": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "full_name": {
+                            "type": "string"
+                        },
+                        "name_prefix": {
+                            "type": "string"
+                        },
+                        "extended_name": {
+                            "type": "string"
+                        },
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "key": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "key"
+                            ]
+                        },
+                        "status": {
+                            "type": "string"
+                        },
+                        "images": {
+                            "type": "object",
+                            "properties": {
+                                "header": {
+                                    "type": "string"
+                                },
+                                "icon": {
+                                    "type": "null"
+                                }
+                            },
+                            "required": [
+                                "header",
+                                "icon"
+                            ]
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "html_url": {
+                            "type": "string"
+                        },
+                        "reviews": {
+                            "type": "object",
+                            "properties": {
+                                "rating": {
+                                    "type": "integer"
+                                },
+                                "count": {
+                                    "type": "integer"
+                                },
+                                "html_url": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "rating",
+                                "count",
+                                "html_url",
+                                "url"
+                            ]
+                        },
+                        "review_url": {
+                            "type": "null"
+                        },
+                        "url": {
+                            "type": "string"
+                        },
+                        "prices": {
+                            "type": "object",
+                            "properties": {
+                                "price_min": {
+                                    "type": "object",
+                                    "properties": {
+                                        "amount": {
+                                            "type": "string"
+                                        },
+                                        "currency": {
+                                            "type": "string"
+                                        },
+                                        "converted": {
+                                            "type": "object",
+                                            "properties": {
+                                                "BYN": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "amount": {
+                                                            "type": "string"
+                                                        },
+                                                        "currency": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "amount",
+                                                        "currency"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "BYN"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "amount",
+                                        "currency",
+                                        "converted"
+                                    ]
+                                },
+                                "price_max": {
+                                    "type": "object",
+                                    "properties": {
+                                        "amount": {
+                                            "type": "string"
+                                        },
+                                        "currency": {
+                                            "type": "string"
+                                        },
+                                        "converted": {
+                                            "type": "object",
+                                            "properties": {
+                                                "BYN": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "amount": {
+                                                            "type": "string"
+                                                        },
+                                                        "currency": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "amount",
+                                                        "currency"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "BYN"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "amount",
+                                        "currency",
+                                        "converted"
+                                    ]
+                                },
+                                "offers": {
+                                    "type": "object",
+                                    "properties": {
+                                        "count": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "required": [
+                                        "count"
+                                    ]
+                                },
+                                "html_url": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "price_min",
+                                "price_max",
+                                "offers",
+                                "html_url",
+                                "url"
+                            ]
+                        },
+                        "second": {
+                            "type": "object",
+                            "properties": {
+                                "offers_count": {
+                                    "type": "integer"
+                                },
+                                "min_price": {
+                                    "type": "null"
+                                }
+                            },
+                            "required": [
+                                "offers_count",
+                                "min_price"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "id",
+                        "key",
+                        "name",
+                        "full_name",
+                        "name_prefix",
+                        "extended_name",
+                        "schema",
+                        "status",
+                        "images",
+                        "description",
+                        "html_url",
+                        "reviews",
+                        "review_url",
+                        "url",
+                        "prices",
+                        "second"
+                    ]
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "integer"
+                        },
+                        "key": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "full_name": {
+                            "type": "string"
+                        },
+                        "name_prefix": {
+                            "type": "string"
+                        },
+                        "extended_name": {
+                            "type": "string"
+                        },
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "key": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "key"
+                            ]
+                        },
+                        "status": {
+                            "type": "string"
+                        },
+                        "images": {
+                            "type": "object",
+                            "properties": {
+                                "header": {
+                                    "type": "string"
+                                },
+                                "icon": {
+                                    "type": "null"
+                                }
+                            },
+                            "required": [
+                                "header",
+                                "icon"
+                            ]
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "html_url": {
+                            "type": "string"
+                        },
+                        "reviews": {
+                            "type": "object",
+                            "properties": {
+                                "rating": {
+                                    "type": "integer"
+                                },
+                                "count": {
+                                    "type": "integer"
+                                },
+                                "html_url": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "rating",
+                                "count",
+                                "html_url",
+                                "url"
+                            ]
+                        },
+                        "review_url": {
+                            "type": "string"
+                        },
+                        "url": {
+                            "type": "string"
+                        },
+                        "prices": {
+                            "type": "object",
+                            "properties": {
+                                "price_min": {
+                                    "type": "object",
+                                    "properties": {
+                                        "amount": {
+                                            "type": "string"
+                                        },
+                                        "currency": {
+                                            "type": "string"
+                                        },
+                                        "converted": {
+                                            "type": "object",
+                                            "properties": {
+                                                "BYN": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "amount": {
+                                                            "type": "string"
+                                                        },
+                                                        "currency": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "amount",
+                                                        "currency"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "BYN"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "amount",
+                                        "currency",
+                                        "converted"
+                                    ]
+                                },
+                                "price_max": {
+                                    "type": "object",
+                                    "properties": {
+                                        "amount": {
+                                            "type": "string"
+                                        },
+                                        "currency": {
+                                            "type": "string"
+                                        },
+                                        "converted": {
+                                            "type": "object",
+                                            "properties": {
+                                                "BYN": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "amount": {
+                                                            "type": "string"
+                                                        },
+                                                        "currency": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "amount",
+                                                        "currency"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "BYN"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "amount",
+                                        "currency",
+                                        "converted"
+                                    ]
+                                },
+                                "offers": {
+                                    "type": "object",
+                                    "properties": {
+                                        "count": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "required": [
+                                        "count"
+                                    ]
+                                },
+                                "html_url": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "price_min",
+                                "price_max",
+                                "offers",
+                                "html_url",
+                                "url"
+                            ]
+                        },
+                        "second": {
+                            "type": "object",
+                            "properties": {
+                                "offers_count": {
+                                    "type": "integer"
+                                },
+                                "min_price": {
+                                    "type": "null"
+                                }
+                            },
+                            "required": [
+                                "offers_count",
+                                "min_price"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "id",
+                        "key",
+                        "name",
+                        "full_name",
+                        "name_prefix",
+                        "extended_name",
+                        "schema",
+                        "status",
+                        "images",
+                        "description",
+                        "html_url",
+                        "reviews",
+                        "review_url",
+                        "url",
+                        "prices",
+                        "second"
+                    ]
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "integer"
+                        },
+                        "key": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "full_name": {
+                            "type": "string"
+                        },
+                        "name_prefix": {
+                            "type": "string"
+                        },
+                        "extended_name": {
+                            "type": "string"
+                        },
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "key": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "key"
+                            ]
+                        },
+                        "status": {
+                            "type": "string"
+                        },
+                        "images": {
+                            "type": "object",
+                            "properties": {
+                                "header": {
+                                    "type": "string"
+                                },
+                                "icon": {
+                                    "type": "null"
+                                }
+                            },
+                            "required": [
+                                "header",
+                                "icon"
+                            ]
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "html_url": {
+                            "type": "string"
+                        },
+                        "reviews": {
+                            "type": "object",
+                            "properties": {
+                                "rating": {
+                                    "type": "integer"
+                                },
+                                "count": {
+                                    "type": "integer"
+                                },
+                                "html_url": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "rating",
+                                "count",
+                                "html_url",
+                                "url"
+                            ]
+                        },
+                        "review_url": {
+                            "type": "string"
+                        },
+                        "url": {
+                            "type": "string"
+                        },
+                        "prices": {
+                            "type": "object",
+                            "properties": {
+                                "price_min": {
+                                    "type": "object",
+                                    "properties": {
+                                        "amount": {
+                                            "type": "string"
+                                        },
+                                        "currency": {
+                                            "type": "string"
+                                        },
+                                        "converted": {
+                                            "type": "object",
+                                            "properties": {
+                                                "BYN": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "amount": {
+                                                            "type": "string"
+                                                        },
+                                                        "currency": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "amount",
+                                                        "currency"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "BYN"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "amount",
+                                        "currency",
+                                        "converted"
+                                    ]
+                                },
+                                "price_max": {
+                                    "type": "object",
+                                    "properties": {
+                                        "amount": {
+                                            "type": "string"
+                                        },
+                                        "currency": {
+                                            "type": "string"
+                                        },
+                                        "converted": {
+                                            "type": "object",
+                                            "properties": {
+                                                "BYN": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "amount": {
+                                                            "type": "string"
+                                                        },
+                                                        "currency": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "amount",
+                                                        "currency"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "BYN"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "amount",
+                                        "currency",
+                                        "converted"
+                                    ]
+                                },
+                                "offers": {
+                                    "type": "object",
+                                    "properties": {
+                                        "count": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "required": [
+                                        "count"
+                                    ]
+                                },
+                                "html_url": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "price_min",
+                                "price_max",
+                                "offers",
+                                "html_url",
+                                "url"
+                            ]
+                        },
+                        "second": {
+                            "type": "object",
+                            "properties": {
+                                "offers_count": {
+                                    "type": "integer"
+                                },
+                                "min_price": {
+                                    "type": "object",
+                                    "properties": {
+                                        "amount": {
+                                            "type": "string"
+                                        },
+                                        "currency": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "amount",
+                                        "currency"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "offers_count",
+                                "min_price"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "id",
+                        "key",
+                        "name",
+                        "full_name",
+                        "name_prefix",
+                        "extended_name",
+                        "schema",
+                        "status",
+                        "images",
+                        "description",
+                        "html_url",
+                        "reviews",
+                        "review_url",
+                        "url",
+                        "prices",
+                        "second"
+                    ]
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "integer"
+                        },
+                        "key": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "full_name": {
+                            "type": "string"
+                        },
+                        "name_prefix": {
+                            "type": "string"
+                        },
+                        "extended_name": {
+                            "type": "string"
+                        },
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "key": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "key"
+                            ]
+                        },
+                        "status": {
+                            "type": "string"
+                        },
+                        "images": {
+                            "type": "object",
+                            "properties": {
+                                "header": {
+                                    "type": "string"
+                                },
+                                "icon": {
+                                    "type": "null"
+                                }
+                            },
+                            "required": [
+                                "header",
+                                "icon"
+                            ]
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "html_url": {
+                            "type": "string"
+                        },
+                        "reviews": {
+                            "type": "object",
+                            "properties": {
+                                "rating": {
+                                    "type": "integer"
+                                },
+                                "count": {
+                                    "type": "integer"
+                                },
+                                "html_url": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "rating",
+                                "count",
+                                "html_url",
+                                "url"
+                            ]
+                        },
+                        "review_url": {
+                            "type": "null"
+                        },
+                        "url": {
+                            "type": "string"
+                        },
+                        "prices": {
+                            "type": "object",
+                            "properties": {
+                                "price_min": {
+                                    "type": "object",
+                                    "properties": {
+                                        "amount": {
+                                            "type": "string"
+                                        },
+                                        "currency": {
+                                            "type": "string"
+                                        },
+                                        "converted": {
+                                            "type": "object",
+                                            "properties": {
+                                                "BYN": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "amount": {
+                                                            "type": "string"
+                                                        },
+                                                        "currency": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "amount",
+                                                        "currency"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "BYN"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "amount",
+                                        "currency",
+                                        "converted"
+                                    ]
+                                },
+                                "price_max": {
+                                    "type": "object",
+                                    "properties": {
+                                        "amount": {
+                                            "type": "string"
+                                        },
+                                        "currency": {
+                                            "type": "string"
+                                        },
+                                        "converted": {
+                                            "type": "object",
+                                            "properties": {
+                                                "BYN": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "amount": {
+                                                            "type": "string"
+                                                        },
+                                                        "currency": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "amount",
+                                                        "currency"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "BYN"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "amount",
+                                        "currency",
+                                        "converted"
+                                    ]
+                                },
+                                "offers": {
+                                    "type": "object",
+                                    "properties": {
+                                        "count": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "required": [
+                                        "count"
+                                    ]
+                                },
+                                "html_url": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "price_min",
+                                "price_max",
+                                "offers",
+                                "html_url",
+                                "url"
+                            ]
+                        },
+                        "second": {
+                            "type": "object",
+                            "properties": {
+                                "offers_count": {
+                                    "type": "integer"
+                                },
+                                "min_price": {
+                                    "type": "null"
+                                }
+                            },
+                            "required": [
+                                "offers_count",
+                                "min_price"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "id",
+                        "key",
+                        "name",
+                        "full_name",
+                        "name_prefix",
+                        "extended_name",
+                        "schema",
+                        "status",
+                        "images",
+                        "description",
+                        "html_url",
+                        "reviews",
+                        "review_url",
+                        "url",
+                        "prices",
+                        "second"
+                    ]
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "integer"
+                        },
+                        "key": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "full_name": {
+                            "type": "string"
+                        },
+                        "name_prefix": {
+                            "type": "string"
+                        },
+                        "extended_name": {
+                            "type": "string"
+                        },
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "key": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "key"
+                            ]
+                        },
+                        "status": {
+                            "type": "string"
+                        },
+                        "images": {
+                            "type": "object",
+                            "properties": {
+                                "header": {
+                                    "type": "string"
+                                },
+                                "icon": {
+                                    "type": "null"
+                                }
+                            },
+                            "required": [
+                                "header",
+                                "icon"
+                            ]
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "html_url": {
+                            "type": "string"
+                        },
+                        "reviews": {
+                            "type": "object",
+                            "properties": {
+                                "rating": {
+                                    "type": "integer"
+                                },
+                                "count": {
+                                    "type": "integer"
+                                },
+                                "html_url": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "rating",
+                                "count",
+                                "html_url",
+                                "url"
+                            ]
+                        },
+                        "review_url": {
+                            "type": "string"
+                        },
+                        "url": {
+                            "type": "string"
+                        },
+                        "prices": {
+                            "type": "object",
+                            "properties": {
+                                "price_min": {
+                                    "type": "object",
+                                    "properties": {
+                                        "amount": {
+                                            "type": "string"
+                                        },
+                                        "currency": {
+                                            "type": "string"
+                                        },
+                                        "converted": {
+                                            "type": "object",
+                                            "properties": {
+                                                "BYN": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "amount": {
+                                                            "type": "string"
+                                                        },
+                                                        "currency": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "amount",
+                                                        "currency"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "BYN"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "amount",
+                                        "currency",
+                                        "converted"
+                                    ]
+                                },
+                                "price_max": {
+                                    "type": "object",
+                                    "properties": {
+                                        "amount": {
+                                            "type": "string"
+                                        },
+                                        "currency": {
+                                            "type": "string"
+                                        },
+                                        "converted": {
+                                            "type": "object",
+                                            "properties": {
+                                                "BYN": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "amount": {
+                                                            "type": "string"
+                                                        },
+                                                        "currency": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "amount",
+                                                        "currency"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "BYN"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "amount",
+                                        "currency",
+                                        "converted"
+                                    ]
+                                },
+                                "offers": {
+                                    "type": "object",
+                                    "properties": {
+                                        "count": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "required": [
+                                        "count"
+                                    ]
+                                },
+                                "html_url": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "price_min",
+                                "price_max",
+                                "offers",
+                                "html_url",
+                                "url"
+                            ]
+                        },
+                        "second": {
+                            "type": "object",
+                            "properties": {
+                                "offers_count": {
+                                    "type": "integer"
+                                },
+                                "min_price": {
+                                    "type": "null"
+                                }
+                            },
+                            "required": [
+                                "offers_count",
+                                "min_price"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "id",
+                        "key",
+                        "name",
+                        "full_name",
+                        "name_prefix",
+                        "extended_name",
+                        "schema",
+                        "status",
+                        "images",
+                        "description",
+                        "html_url",
+                        "reviews",
+                        "review_url",
+                        "url",
+                        "prices",
+                        "second"
+                    ]
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "integer"
+                        },
+                        "key": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "full_name": {
+                            "type": "string"
+                        },
+                        "name_prefix": {
+                            "type": "string"
+                        },
+                        "extended_name": {
+                            "type": "string"
+                        },
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "key": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "key"
+                            ]
+                        },
+                        "status": {
+                            "type": "string"
+                        },
+                        "images": {
+                            "type": "object",
+                            "properties": {
+                                "header": {
+                                    "type": "string"
+                                },
+                                "icon": {
+                                    "type": "null"
+                                }
+                            },
+                            "required": [
+                                "header",
+                                "icon"
+                            ]
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "html_url": {
+                            "type": "string"
+                        },
+                        "reviews": {
+                            "type": "object",
+                            "properties": {
+                                "rating": {
+                                    "type": "integer"
+                                },
+                                "count": {
+                                    "type": "integer"
+                                },
+                                "html_url": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "rating",
+                                "count",
+                                "html_url",
+                                "url"
+                            ]
+                        },
+                        "review_url": {
+                            "type": "null"
+                        },
+                        "url": {
+                            "type": "string"
+                        },
+                        "prices": {
+                            "type": "object",
+                            "properties": {
+                                "price_min": {
+                                    "type": "object",
+                                    "properties": {
+                                        "amount": {
+                                            "type": "string"
+                                        },
+                                        "currency": {
+                                            "type": "string"
+                                        },
+                                        "converted": {
+                                            "type": "object",
+                                            "properties": {
+                                                "BYN": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "amount": {
+                                                            "type": "string"
+                                                        },
+                                                        "currency": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "amount",
+                                                        "currency"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "BYN"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "amount",
+                                        "currency",
+                                        "converted"
+                                    ]
+                                },
+                                "price_max": {
+                                    "type": "object",
+                                    "properties": {
+                                        "amount": {
+                                            "type": "string"
+                                        },
+                                        "currency": {
+                                            "type": "string"
+                                        },
+                                        "converted": {
+                                            "type": "object",
+                                            "properties": {
+                                                "BYN": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "amount": {
+                                                            "type": "string"
+                                                        },
+                                                        "currency": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "amount",
+                                                        "currency"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "BYN"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "amount",
+                                        "currency",
+                                        "converted"
+                                    ]
+                                },
+                                "offers": {
+                                    "type": "object",
+                                    "properties": {
+                                        "count": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "required": [
+                                        "count"
+                                    ]
+                                },
+                                "html_url": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "price_min",
+                                "price_max",
+                                "offers",
+                                "html_url",
+                                "url"
+                            ]
+                        },
+                        "second": {
+                            "type": "object",
+                            "properties": {
+                                "offers_count": {
+                                    "type": "integer"
+                                },
+                                "min_price": {
+                                    "type": "null"
+                                }
+                            },
+                            "required": [
+                                "offers_count",
+                                "min_price"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "id",
+                        "key",
+                        "name",
+                        "full_name",
+                        "name_prefix",
+                        "extended_name",
+                        "schema",
+                        "status",
+                        "images",
+                        "description",
+                        "html_url",
+                        "reviews",
+                        "review_url",
+                        "url",
+                        "prices",
+                        "second"
+                    ]
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "integer"
+                        },
+                        "key": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "full_name": {
+                            "type": "string"
+                        },
+                        "name_prefix": {
+                            "type": "string"
+                        },
+                        "extended_name": {
+                            "type": "string"
+                        },
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "key": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "key"
+                            ]
+                        },
+                        "status": {
+                            "type": "string"
+                        },
+                        "images": {
+                            "type": "object",
+                            "properties": {
+                                "header": {
+                                    "type": "string"
+                                },
+                                "icon": {
+                                    "type": "null"
+                                }
+                            },
+                            "required": [
+                                "header",
+                                "icon"
+                            ]
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "html_url": {
+                            "type": "string"
+                        },
+                        "reviews": {
+                            "type": "object",
+                            "properties": {
+                                "rating": {
+                                    "type": "integer"
+                                },
+                                "count": {
+                                    "type": "integer"
+                                },
+                                "html_url": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "rating",
+                                "count",
+                                "html_url",
+                                "url"
+                            ]
+                        },
+                        "review_url": {
+                            "type": "null"
+                        },
+                        "url": {
+                            "type": "string"
+                        },
+                        "prices": {
+                            "type": "object",
+                            "properties": {
+                                "price_min": {
+                                    "type": "object",
+                                    "properties": {
+                                        "amount": {
+                                            "type": "string"
+                                        },
+                                        "currency": {
+                                            "type": "string"
+                                        },
+                                        "converted": {
+                                            "type": "object",
+                                            "properties": {
+                                                "BYN": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "amount": {
+                                                            "type": "string"
+                                                        },
+                                                        "currency": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "amount",
+                                                        "currency"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "BYN"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "amount",
+                                        "currency",
+                                        "converted"
+                                    ]
+                                },
+                                "price_max": {
+                                    "type": "object",
+                                    "properties": {
+                                        "amount": {
+                                            "type": "string"
+                                        },
+                                        "currency": {
+                                            "type": "string"
+                                        },
+                                        "converted": {
+                                            "type": "object",
+                                            "properties": {
+                                                "BYN": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "amount": {
+                                                            "type": "string"
+                                                        },
+                                                        "currency": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "amount",
+                                                        "currency"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "BYN"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "amount",
+                                        "currency",
+                                        "converted"
+                                    ]
+                                },
+                                "offers": {
+                                    "type": "object",
+                                    "properties": {
+                                        "count": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "required": [
+                                        "count"
+                                    ]
+                                },
+                                "html_url": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "price_min",
+                                "price_max",
+                                "offers",
+                                "html_url",
+                                "url"
+                            ]
+                        },
+                        "second": {
+                            "type": "object",
+                            "properties": {
+                                "offers_count": {
+                                    "type": "integer"
+                                },
+                                "min_price": {
+                                    "type": "null"
+                                }
+                            },
+                            "required": [
+                                "offers_count",
+                                "min_price"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "id",
+                        "key",
+                        "name",
+                        "full_name",
+                        "name_prefix",
+                        "extended_name",
+                        "schema",
+                        "status",
+                        "images",
+                        "description",
+                        "html_url",
+                        "reviews",
+                        "review_url",
+                        "url",
+                        "prices",
+                        "second"
+                    ]
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "integer"
+                        },
+                        "key": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "full_name": {
+                            "type": "string"
+                        },
+                        "name_prefix": {
+                            "type": "string"
+                        },
+                        "extended_name": {
+                            "type": "string"
+                        },
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "key": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "key"
+                            ]
+                        },
+                        "status": {
+                            "type": "string"
+                        },
+                        "images": {
+                            "type": "object",
+                            "properties": {
+                                "header": {
+                                    "type": "string"
+                                },
+                                "icon": {
+                                    "type": "null"
+                                }
+                            },
+                            "required": [
+                                "header",
+                                "icon"
+                            ]
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "html_url": {
+                            "type": "string"
+                        },
+                        "reviews": {
+                            "type": "object",
+                            "properties": {
+                                "rating": {
+                                    "type": "integer"
+                                },
+                                "count": {
+                                    "type": "integer"
+                                },
+                                "html_url": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "rating",
+                                "count",
+                                "html_url",
+                                "url"
+                            ]
+                        },
+                        "review_url": {
+                            "type": "null"
+                        },
+                        "url": {
+                            "type": "string"
+                        },
+                        "prices": {
+                            "type": "object",
+                            "properties": {
+                                "price_min": {
+                                    "type": "object",
+                                    "properties": {
+                                        "amount": {
+                                            "type": "string"
+                                        },
+                                        "currency": {
+                                            "type": "string"
+                                        },
+                                        "converted": {
+                                            "type": "object",
+                                            "properties": {
+                                                "BYN": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "amount": {
+                                                            "type": "string"
+                                                        },
+                                                        "currency": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "amount",
+                                                        "currency"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "BYN"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "amount",
+                                        "currency",
+                                        "converted"
+                                    ]
+                                },
+                                "price_max": {
+                                    "type": "object",
+                                    "properties": {
+                                        "amount": {
+                                            "type": "string"
+                                        },
+                                        "currency": {
+                                            "type": "string"
+                                        },
+                                        "converted": {
+                                            "type": "object",
+                                            "properties": {
+                                                "BYN": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "amount": {
+                                                            "type": "string"
+                                                        },
+                                                        "currency": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "amount",
+                                                        "currency"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "BYN"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "amount",
+                                        "currency",
+                                        "converted"
+                                    ]
+                                },
+                                "offers": {
+                                    "type": "object",
+                                    "properties": {
+                                        "count": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "required": [
+                                        "count"
+                                    ]
+                                },
+                                "html_url": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "price_min",
+                                "price_max",
+                                "offers",
+                                "html_url",
+                                "url"
+                            ]
+                        },
+                        "second": {
+                            "type": "object",
+                            "properties": {
+                                "offers_count": {
+                                    "type": "integer"
+                                },
+                                "min_price": {
+                                    "type": "null"
+                                }
+                            },
+                            "required": [
+                                "offers_count",
+                                "min_price"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "id",
+                        "key",
+                        "name",
+                        "full_name",
+                        "name_prefix",
+                        "extended_name",
+                        "schema",
+                        "status",
+                        "images",
+                        "description",
+                        "html_url",
+                        "reviews",
+                        "review_url",
+                        "url",
+                        "prices",
+                        "second"
+                    ]
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "integer"
+                        },
+                        "key": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "full_name": {
+                            "type": "string"
+                        },
+                        "name_prefix": {
+                            "type": "string"
+                        },
+                        "extended_name": {
+                            "type": "string"
+                        },
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "key": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "key"
+                            ]
+                        },
+                        "status": {
+                            "type": "string"
+                        },
+                        "images": {
+                            "type": "object",
+                            "properties": {
+                                "header": {
+                                    "type": "string"
+                                },
+                                "icon": {
+                                    "type": "null"
+                                }
+                            },
+                            "required": [
+                                "header",
+                                "icon"
+                            ]
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "html_url": {
+                            "type": "string"
+                        },
+                        "reviews": {
+                            "type": "object",
+                            "properties": {
+                                "rating": {
+                                    "type": "integer"
+                                },
+                                "count": {
+                                    "type": "integer"
+                                },
+                                "html_url": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "rating",
+                                "count",
+                                "html_url",
+                                "url"
+                            ]
+                        },
+                        "review_url": {
+                            "type": "null"
+                        },
+                        "url": {
+                            "type": "string"
+                        },
+                        "prices": {
+                            "type": "object",
+                            "properties": {
+                                "price_min": {
+                                    "type": "object",
+                                    "properties": {
+                                        "amount": {
+                                            "type": "string"
+                                        },
+                                        "currency": {
+                                            "type": "string"
+                                        },
+                                        "converted": {
+                                            "type": "object",
+                                            "properties": {
+                                                "BYN": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "amount": {
+                                                            "type": "string"
+                                                        },
+                                                        "currency": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "amount",
+                                                        "currency"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "BYN"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "amount",
+                                        "currency",
+                                        "converted"
+                                    ]
+                                },
+                                "price_max": {
+                                    "type": "object",
+                                    "properties": {
+                                        "amount": {
+                                            "type": "string"
+                                        },
+                                        "currency": {
+                                            "type": "string"
+                                        },
+                                        "converted": {
+                                            "type": "object",
+                                            "properties": {
+                                                "BYN": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "amount": {
+                                                            "type": "string"
+                                                        },
+                                                        "currency": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "amount",
+                                                        "currency"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "BYN"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "amount",
+                                        "currency",
+                                        "converted"
+                                    ]
+                                },
+                                "offers": {
+                                    "type": "object",
+                                    "properties": {
+                                        "count": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "required": [
+                                        "count"
+                                    ]
+                                },
+                                "html_url": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "price_min",
+                                "price_max",
+                                "offers",
+                                "html_url",
+                                "url"
+                            ]
+                        },
+                        "second": {
+                            "type": "object",
+                            "properties": {
+                                "offers_count": {
+                                    "type": "integer"
+                                },
+                                "min_price": {
+                                    "type": "null"
+                                }
+                            },
+                            "required": [
+                                "offers_count",
+                                "min_price"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "id",
+                        "key",
+                        "name",
+                        "full_name",
+                        "name_prefix",
+                        "extended_name",
+                        "schema",
+                        "status",
+                        "images",
+                        "description",
+                        "html_url",
+                        "reviews",
+                        "review_url",
+                        "url",
+                        "prices",
+                        "second"
+                    ]
+                }
+            ]
+        },
+        "total": {
+            "type": "integer"
+        },
+        "page": {
+            "type": "object",
+            "properties": {
+                "limit": {
+                    "type": "integer"
+                },
+                "items": {
+                    "type": "integer"
+                },
+                "current": {
+                    "type": "integer"
+                },
+                "last": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "limit",
+                "items",
+                "current",
+                "last"
+            ]
+        }
+    },
+    "required": [
+        "products",
+        "total",
+        "page"
+    ]
+}
